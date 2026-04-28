@@ -42,6 +42,14 @@
 	      loop:true,
 	      nav: true,
 		  dots:true,
+		  autoplay: true,
+		  // English: Shorter stay per slide for a faster homepage rhythm.
+		  // 中文：縮短每張停留時間，讓首頁輪播節奏更快。
+		  autoplayTimeout: 2800,
+		  // English: Keep transition smooth while autoplay is faster.
+		  // 中文：在加快自動輪播時，維持切換動畫流暢不拖沓。
+		  smartSpeed: 500,
+		  autoplayHoverPause: false,
 		  navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 	      margin:30,
 	      responsive:{
@@ -52,6 +60,35 @@
 				items:1
 			}
 	      }
+		});
+	}
+
+	// Property details gallery carousel
+	// English: Initialize only when the details gallery exists.
+	// 中文：僅在物件詳情頁有輪播區塊時初始化，避免影響其他頁面。
+	if ($('.property-gallery-carousel').length && $.fn.owlCarousel) {
+		$('.property-gallery-carousel').owlCarousel({
+			items: 1,
+			loop: true,
+			nav: true,
+			dots: true,
+			autoplay: false,
+			smartSpeed: 700,
+			navText: [
+				'<i class="fa fa-angle-left" aria-hidden="true"></i>',
+				'<i class="fa fa-angle-right" aria-hidden="true"></i>'
+			],
+			responsive: {
+				0: {
+					items: 1
+				},
+				768: {
+					items: 1
+				},
+				1200: {
+					items: 1
+				}
+			}
 		});
 	}
 

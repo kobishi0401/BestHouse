@@ -16,6 +16,7 @@
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/main-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
 <!--
 
 -->
@@ -81,12 +82,32 @@
       <div class="row">
         <div class="col-lg-8">
           <div class="main-image">
-            <!-- alt：螢幕閱讀器與圖片失效時顯示；簡述物件形象 -->
-            <img src="assets/images/single-property.webp" alt="台中高級區公益路精選豪邸外觀與景觀示意">
+            <!-- Property gallery carousel / 物件主圖輪播 -->
+            <div class="owl-carousel property-gallery-carousel">
+              <div class="item">
+                <img src="assets/images/property-01.webp" alt="豪邸外觀與景觀示意圖 1">
+              </div>
+              <div class="item">
+                <img src="assets/images/property-02.webp" alt="豪邸外觀與景觀示意圖 2">
+              </div>
+              <div class="item">
+                <img src="assets/images/property-03.webp" alt="豪邸外觀與景觀示意圖 3">
+              </div>
+              <div class="item">
+                <img src="assets/images/property-04.webp" alt="豪邸外觀與景觀示意圖 4">
+              </div>
+              <div class="item">
+                <img src="assets/images/property-05.webp" alt="豪邸外觀與景觀示意圖 5">
+              </div>
+            </div>
           </div>
           <div class="main-content">
             <span class="category category-villa">豪華別墅</span>
-            <h4>台中市高級區公益路789號</h4>
+            <!-- Title row with CTA button / 標題列含立即預約按鈕 -->
+            <div class="property-title-row">
+              <h4>台中市高級區公益路789號</h4>
+              <a href="contact.html" class="book-now-btn" aria-label="立即預約賞屋，前往聯絡頁面">立即預約</a>
+            </div>
             <p>本戶為<strong>大坪數景觀住宅</strong>，室內實得約 123 坪，格局規劃寬敞舒適，含獨立客／餐廳、多功能書房與飯店式主臥套房；大面落地窗引入自然採光，並保留開放視野，兼顧隱私與通透感。建材與衛浴設備皆選用知名品牌，適合注重生活品質與長住安穩的家庭。<br><br>
             物件座落台中精華生活圈，鄰近百貨商圈、公園綠地與主要幹道，日常採買與通勤皆便利；社區採飯店式管理，門禁與梯控分流，讓住戶出入更安心。若您正在尋找兼具地段、坪數與管理品質的理想居所，歡迎預約現場體驗實際動線與景觀。</p>
           </div> 
@@ -268,6 +289,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/custom.js"></script>
 
   </body>

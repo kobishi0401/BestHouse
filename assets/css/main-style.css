@@ -257,7 +257,7 @@ Header Style
 
 .header-area .main-nav .logo h1 {
   line-height: 100px;
-  font-size: 28px;
+  font-size: 32px;
   text-transform: uppercase;
   color: #1e1e1e;
   font-weight: 700;
@@ -290,10 +290,10 @@ Header Style
 
 .header-area .main-nav .nav li a {
   display: block;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 19px;
   height: 40px;
   line-height: 40px;
   text-transform: capitalize;
@@ -306,7 +306,7 @@ Header Style
 .header-area .main-nav .nav li:last-child a {
   background-color: #1e1e1e;
   color: #fff;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   text-transform: none;
   border-radius: 20px;
@@ -852,14 +852,26 @@ Best Deal Style
   background-color: transparent;
 }
 
-.best-deal .tabs-content h4 {
-  font-size: 17px;
-  font-weight: 600;
-  margin-bottom: 30px;
+/* Best Deal description text / 最佳選擇右側介紹文字 */
+.best-deal .tab-content .tab-pane .col-lg-3 > h4 {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.best-deal .tab-content .tab-pane .col-lg-3 > p {
+  font-size: 18px;
+  line-height: 1.9;
 }
 
 .best-deal .icon-button {
   margin-top: 30px;
+}
+
+.best-deal .icon-button a {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 
@@ -1019,7 +1031,7 @@ Contact Style
 }
 
 .contact-content #contact-form label {
-  font-size: 15px;
+  font-size: 17px;
   color: #3a3a3a;
   margin-bottom: 15px;
 }
@@ -1031,7 +1043,7 @@ Contact Style
   background-color: #f6f6f6;
   border: none;
   margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 16px;
   padding: 0px 15px;
 }
 
@@ -1043,8 +1055,13 @@ Contact Style
   background-color: #f6f6f6;
   border: none;
   margin-bottom: 40px;
-  font-size: 14px;
+  font-size: 16px;
   padding: 15px 15px;
+}
+
+.contact-content #contact-form input::placeholder,
+.contact-content #contact-form textarea::placeholder {
+  font-size: 16px;
 }
 
 .contact-content #contact-form button {
@@ -1054,7 +1071,7 @@ Contact Style
   padding: 0px 20px;
   color: #fff;
   border: none;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   transition: all .5s;
 }
@@ -1295,12 +1312,122 @@ Single Page Style
   float: none;
 }
 
+/* Property details carousel / 物件詳情主圖輪播 */
+.single-property .main-image .property-gallery-carousel {
+  position: relative;
+}
+
+.single-property .main-image .property-gallery-carousel .item img {
+  display: block;
+  width: 100%;
+  float: none;
+}
+
+.single-property .main-image .property-gallery-carousel .owl-nav {
+  margin-top: 0;
+}
+
+.single-property .main-image .property-gallery-carousel .owl-nav .owl-prev,
+.single-property .main-image .property-gallery-carousel .owl-nav .owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(20, 133, 181, 0.92);
+  color: #ffffff;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.single-property .main-image .property-gallery-carousel .owl-nav .owl-prev {
+  left: 16px;
+}
+
+.single-property .main-image .property-gallery-carousel .owl-nav .owl-next {
+  right: 16px;
+}
+
+.single-property .main-image .property-gallery-carousel .owl-nav .owl-prev:hover,
+.single-property .main-image .property-gallery-carousel .owl-nav .owl-next:hover {
+  background-color: #0f6f98;
+  transform: translateY(-50%) scale(1.04);
+}
+
+.single-property .main-image .property-gallery-carousel .owl-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14px;
+  text-align: center;
+}
+
+.single-property .main-image .property-gallery-carousel .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.single-property .main-image .property-gallery-carousel .owl-dots .owl-dot.active span {
+  background: #1485b5;
+}
+
 .single-property .main-content h4 {
   font-size: 25px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Property title row with booking CTA / 物件標題列與預約按鈕 */
+.single-property .main-content .property-title-row {
   margin-top: 25px;
   margin-bottom: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Eye-catching CTA button / 醒目立即預約按鈕 */
+.single-property .main-content .book-now-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 13px 30px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2d8cff 0%, #00c2a8 100%);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  box-shadow: 0 12px 26px rgba(45, 140, 255, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  white-space: nowrap;
+}
+
+.single-property .main-content .book-now-btn:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 16px 32px rgba(45, 140, 255, 0.45);
+}
+
+.single-property .main-content .book-now-btn:focus-visible {
+  outline: 3px solid #1485b5;
+  outline-offset: 3px;
+}
+
+/* Property main description text / 物件主介紹文字大小 */
+.single-property .main-content > p {
+  font-size: 18px;
+  line-height: 2;
 }
 
 .single-property .main-content span.category {
@@ -1327,12 +1454,14 @@ Single Page Style
 }
 
 .single-property .detail-card h5 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 14px;
 }
 
 .single-property .detail-card p {
+  font-size: 17px;
+  line-height: 1.9;
   margin-bottom: 0;
 }
 
@@ -1447,6 +1576,12 @@ Contact Page Style
   margin-bottom: 50px;
 }
 
+/* Contact intro paragraph (EN) / 聯絡頁介紹段落（中） */
+.contact-page .contact-intro {
+  font-size: 20px;
+  line-height: 1.9;
+}
+
 .contact-page .item {
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
@@ -1487,7 +1622,7 @@ Contact Page Style
 }
 
 .contact-page #contact-form label {
-  font-size: 15px;
+  font-size: 17px;
   color: #3a3a3a;
   margin-bottom: 15px;
 }
@@ -1499,7 +1634,7 @@ Contact Page Style
   background-color: #f6f6f6;
   border: none;
   margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 16px;
   padding: 0px 15px;
 }
 
@@ -1511,8 +1646,13 @@ Contact Page Style
   background-color: #f6f6f6;
   border: none;
   margin-bottom: 40px;
-  font-size: 14px;
+  font-size: 16px;
   padding: 15px 15px;
+}
+
+.contact-page #contact-form input::placeholder,
+.contact-page #contact-form textarea::placeholder {
+  font-size: 16px;
 }
 
 .contact-page #contact-form button {
@@ -1522,7 +1662,7 @@ Contact Page Style
   padding: 0px 20px;
   color: #fff;
   border: none;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   transition: all .5s;
 }
@@ -1545,6 +1685,10 @@ body {
 @media (max-width: 767px) {
   .header-area .main-nav .logo h1 {
     line-height: 80px !important;
+    font-size: 26px;
+  }
+  .header-area .main-nav .nav li a {
+    font-size: 16px;
   }
   .best-deal .tabs-content ul.nav-tabs li {
     margin: 0px 5px;
@@ -1557,6 +1701,7 @@ body {
 @media (max-width: 992px) {
   .header-area .main-nav .logo h1 {
     line-height: 100px;
+    font-size: 30px;
   }
   .background-header .main-nav .logo h1 {
     line-height: 80px;
@@ -1564,9 +1709,11 @@ body {
   .header-area .main-nav .nav li a {
     padding-left: 3px;
     padding-right: 3px;
+    font-size: 17px;
   }
   .header-area .main-nav .nav li:last-child a {
     padding-right: 15px;
+    font-size: 16px;
   }
   .main-banner .item h2 {
     width: 100%;
@@ -1599,8 +1746,13 @@ body {
   .best-deal .tab-content img {
     padding: 0px;
   }
-  .best-deal .tabs-content h4 {
+  .best-deal .tab-content .tab-pane .col-lg-3 > h4 {
     margin-top: 45px;
+    font-size: 22px;
+  }
+  .best-deal .tab-content .tab-pane .col-lg-3 > p {
+    font-size: 17px;
+    line-height: 1.85;
   }
   .properties .item .main-button {
     text-align: center;
@@ -1852,11 +2004,56 @@ English: Mobile/tablet safety overrides for core pages.
   }
 
   /* Single property page / 物件詳情頁 */
+  .single-property .main-image .property-gallery-carousel .owl-nav .owl-prev,
+  .single-property .main-image .property-gallery-carousel .owl-nav .owl-next {
+    width: 38px;
+    height: 38px;
+  }
+
+  .single-property .main-image .property-gallery-carousel .owl-nav .owl-prev {
+    left: 10px;
+  }
+
+  .single-property .main-image .property-gallery-carousel .owl-nav .owl-next {
+    right: 10px;
+  }
+
+  .single-property .main-image .property-gallery-carousel .owl-dots {
+    bottom: 10px;
+  }
+
   .single-property .main-content h4 {
     font-size: 22px;
+  }
+
+  .single-property .main-content .property-title-row {
     margin-top: 18px;
     margin-bottom: 26px;
     padding-bottom: 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .single-property .main-content .book-now-btn {
+    width: auto;
+    min-height: 48px;
+    padding: 11px 24px;
+    font-size: 16px;
+  }
+
+  .single-property .main-content > p {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  .single-property .detail-card h5 {
+    font-size: 21px;
+  }
+
+  .single-property .detail-card p {
+    font-size: 15px;
+    line-height: 1.8;
   }
 
   .single-property .accordion {
@@ -1933,6 +2130,20 @@ English: Mobile/tablet safety overrides for core pages.
 
   .best-deal .tabs-content ul.nav-tabs li {
     width: 100%;
+  }
+
+  .best-deal .tab-content .tab-pane .col-lg-3 > h4 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .best-deal .tab-content .tab-pane .col-lg-3 > p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .best-deal .icon-button a {
+    font-size: 15px;
   }
 
   .properties .item h4 {
