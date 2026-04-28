@@ -1512,10 +1512,6 @@ Single Page Style
   display: none;
 }
 
-.single-property #headingThree {
-  border-bottom: none;
-}
-
 .single-property .accordion-item:last-of-type .accordion-collapse {
   border-top: 1px solid #eaeaea;
 }
